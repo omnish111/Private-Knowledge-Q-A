@@ -5,11 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace=private-qa-app/server\" \"npm run dev --workspace=private-qa-app/client\"",
-    "build": "npm run build --workspace=private-qa-app/client",
-    "start": "node api/index.js"
-  },
-  "engines": {
-    "node": "18.x"
+    "build": "npm run build --workspace=private-qa-app/client"
   },
   "dependencies": {
     "express": "^4.18.2",
