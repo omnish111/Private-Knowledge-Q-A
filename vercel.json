@@ -9,7 +9,7 @@
       "src": "private-qa-app/client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "../../dist"
+        "distDir": "dist"
       }
     }
   ],
