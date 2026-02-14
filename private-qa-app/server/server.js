@@ -397,16 +397,15 @@ Remember: Use ONLY the document content to answer. No external knowledge. Always
   }
 });
 
-// Health check
-app.get("/api/health", (req, res) => {
-  res.json({ status: "Server is running" });
+// Root route (Fix Cannot GET /)
+app.get("/", (req, res) => {
+  res.json({
+    status: "OK",
+    message: "Private Knowledge Q&A API running on Vercel"
+  });
 });
 
 // Start server
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
-}
-
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
