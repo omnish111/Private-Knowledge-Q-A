@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "private-qa-app/server/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "private-qa-app/client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "../../dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/api/(.*)$",
+      "dest": "/private-qa-app/server/server.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
