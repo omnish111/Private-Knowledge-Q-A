@@ -7,7 +7,8 @@
     "dev": "concurrently \"npm run dev --workspace=private-qa-app/server\" \"npm run dev --workspace=private-qa-app/client\"",
     "server": "npm run dev --workspace=private-qa-app/server",
     "client": "npm run dev --workspace=private-qa-app/client",
-    "install-all": "npm install && npm install --workspace=private-qa-app/server && npm install --workspace=private-qa-app/client"
+    "install-all": "npm install && npm install --workspace=private-qa-app/server && npm install --workspace=private-qa-app/client",
+    "build": "npm run build --workspace=private-qa-app/client"
   },
   "workspaces": [
     "private-qa-app/server",
